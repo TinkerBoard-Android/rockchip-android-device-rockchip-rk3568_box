@@ -108,7 +108,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.hwc.device.extend=eDP \
     wifi.interface=wlan0 \
     ro.audio.monitorOrientation=true \
-    vendor.hwc.compose_policy=6 \
     persist.vendor.rk_vulkan=true \
     sf.power.control=2073600 \
     ro.tether.denied=false \
