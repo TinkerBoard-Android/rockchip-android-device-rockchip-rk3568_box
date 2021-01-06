@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-        $(LOCAL_DIR)/rk3568_box/rk3568_box.mk
+        $(LOCAL_DIR)/rk356x_box/rk356x_box.mk
 
 COMMON_LUNCH_CHOICES := \
-    rk3568_box-user \
-    rk3568_box-userdebug
+    rk356x_box-user \
+    rk356x_box-userdebug
 

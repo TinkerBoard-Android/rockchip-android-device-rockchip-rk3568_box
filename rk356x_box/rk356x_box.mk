@@ -22,21 +22,21 @@ PRODUCT_DTBO_TEMPLATE := $(LOCAL_PATH)/dt-overlay.in
 PRODUCT_SDMMC_DEVICE := fe2b0000.dwmmc
 
 include device/rockchip/common/build/rockchip/DynamicPartitions.mk
-include device/rockchip/rk3568_box/rk3568_box/BoardConfig.mk
+include device/rockchip/rk356x_box/rk356x_box/BoardConfig.mk
 include device/rockchip/common/BoardConfig.mk
-$(call inherit-product, device/rockchip/rk3568_box/device.mk)
+$(call inherit-product, device/rockchip/rk356x_box/device.mk)
 $(call inherit-product, device/rockchip/common/device.mk)
 $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-heap.mk)
 
 #DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/../overlay
-DEVICE_MANIFEST_FILE := device/rockchip/rk3568_box/rk3568_box/manifest.xml
+DEVICE_MANIFEST_FILE := device/rockchip/rk356x_box/rk356x_box/manifest.xml
 
 PRODUCT_CHARACTERISTICS := tv
 
-PRODUCT_NAME := rk3568_box
-PRODUCT_DEVICE := rk3568_box
+PRODUCT_NAME := rk356x_box
+PRODUCT_DEVICE := rk356x_box
 PRODUCT_BRAND := rockchip
-PRODUCT_MODEL := rk3568_box
+PRODUCT_MODEL := rk356x_box
 PRODUCT_MANUFACTURER := rockchip
 PRODUCT_AAPT_PREF_CONFIG := tvdpi
 #
@@ -79,7 +79,7 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     memtrack.$(TARGET_BOARD_PLATFORM)
 
-PRODUCT_PACKAGE_OVERLAYS += device/rockchip/rk3568_box/rk3568_box/overlay
+PRODUCT_PACKAGE_OVERLAYS += device/rockchip/rk356x_box/rk356x_box/overlay
 
 # GTVS add the Client ID (provided by Google)
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -87,7 +87,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # copy input keylayout and device config
 PRODUCT_COPY_FILES += \
-    device/rockchip/rk3568_box/rk3568_box/remote_config/fe700030_pwm.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/fe700030_pwm.kl \
+    device/rockchip/rk356x_box/rk356x_box/remote_config/fe700030_pwm.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/fe700030_pwm.kl \
+    device/rockchip/rk356x_box/rk356x_box/remote_config/fe6e0030_pwm.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/fe6e0030_pwm.kl
 
 # Vendor seccomp policy files for media components:
 PRODUCT_COPY_FILES += \
@@ -97,14 +98,14 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libeffects/data/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
 
 PRODUCT_COPY_FILES += \
-    device/rockchip/rk3568_box/rk3568_box/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml \
+    device/rockchip/rk356x_box/rk356x_box/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml \
     $(TARGET_DEVICE_DIR)/media_profiles_default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
 
 #
 #add Rockchip properties here
 #
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.machinetype=3568_nvr \
+    persist.sys.machinetype=356x_box \
     vendor.hwc.device.extend=eDP \
     wifi.interface=wlan0 \
     ro.audio.monitorOrientation=true \
@@ -117,7 +118,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.android.checkjni=0 \
     ro.vendor.nrdp.modelgroup=NEXUSPLAYERFUGU \
     vendor.hwc.device.primary=HDMI-A,TV \
-    ro.vendor.sdkversion=RK3568_ANDROID11.0_BOX_V1.0.1 \
+    ro.vendor.sdkversion=RK356x_ANDROID11.0_BOX_V1.0.0 \
 
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \

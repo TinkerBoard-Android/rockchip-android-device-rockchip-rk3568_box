@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-include device/rockchip/rk3568_box/CommonBoardConfig.mk
+include device/rockchip/rk356x_box/CommonBoardConfig.mk
 BUILD_WITH_GO_OPT := false
 
 # AB image definition
@@ -21,9 +21,9 @@ BOARD_USES_AB_IMAGE := false
 
 ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
     include device/rockchip/common/BoardConfig_AB.mk
-    TARGET_RECOVERY_FSTAB := device/rockchip/rk3568_box/rk3568_box/recovery.fstab_AB
+    TARGET_RECOVERY_FSTAB := device/rockchip/rk356x_box/rk356x_box/recovery.fstab_AB
 endif
 
-PRODUCT_UBOOT_CONFIG := rk3568
+PRODUCT_UBOOT_CONFIG := rk3566
 PRODUCT_KERNEL_DTS := rk3568-nvr-demo-v10
 BOARD_GSENSOR_MXC6655XA_SUPPORT := true
