@@ -13,6 +13,8 @@ PRODUCT_PACKAGES += \
 
 $(call inherit-product-if-exists, vendor/rockchip/common/npu/npu.mk)
 
+BOARD_SEPOLICY_DIRS += device/rockchip/rk356x_box/sepolicy_vendor
+
 # enable this for support f2fs with data partion
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 
@@ -33,7 +35,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/init.rk356x.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.rk356x.rc \
     $(LOCAL_PATH)/wake_lock_filter.xml:system/etc/wake_lock_filter.xml \
     $(LOCAL_PATH)/package_performance.xml:$(TARGET_COPY_OUT_ODM)/etc/package_performance.xml \
-    $(TARGET_DEVICE_DIR)/media_profiles_default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml\
+    $(TARGET_DEVICE_DIR)/media_profiles_default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
+    $(LOCAL_PATH)/etc/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml
@@ -59,27 +62,38 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/public.libraries.txt:vendor/etc/public.libraries.txt
 
+TARGET_BOARD_CONCISE_RESOLUTION := true
+# remove some resolution which are not commonly used
+ifeq ($(TARGET_BOARD_CONCISE_RESOLUTION),true)
+PRODUCT_COPY_FILES += \
+    device/rockchip/rk356x_box/etc/resolution_white.xml:/system/usr/share/resolution_white.xml
+endif
+
 #
 # add Rockchip properties here
 #
 PRODUCT_PROPERTY_OVERRIDES += \
-                ro.ril.ecclist=112,911 \
-                ro.opengles.version=196610 \
-                wifi.interface=wlan0 \
-                ro.audio.monitorOrientation=true \
-                debug.nfc.fw_download=false \
-                debug.nfc.se=false \
-                vendor.hwc.compose_policy=1 \
-                sys.wallpaper.rgb565=0 \
-                sf.power.control=2073600 \
-                sys.rkadb.root=0 \
-                ro.sf.fakerotation=false \
-                ro.tether.denied=false \
-                sys.resolution.changed=false \
-                ro.default.size=100 \
-                ro.product.usbfactory=rockchip_usb \
-                wifi.supplicant_scan_interval=15 \
-                ro.factory.tool=0 \
-                ro.kernel.android.checkjni=0 \
-                ro.build.shutdown_timeout=0 \
-                persist.enable_task_snapshots=false
+	ro.ril.ecclist=112,911 \
+	ro.opengles.version=196610 \
+	wifi.interface=wlan0 \
+	ro.audio.monitorOrientation=true \
+	debug.nfc.fw_download=false \
+	debug.nfc.se=false \
+	vendor.hwc.compose_policy=1 \
+	sys.wallpaper.rgb565=0 \
+	sf.power.control=2073600 \
+	sys.rkadb.root=0 \
+	ro.sf.fakerotation=false \
+	ro.tether.denied=false \
+	sys.resolution.changed=false \
+	ro.default.size=100 \
+	ro.product.usbfactory=rockchip_usb \
+	wifi.supplicant_scan_interval=15 \
+	ro.factory.tool=0 \
+	ro.kernel.android.checkjni=0 \
+	ro.build.shutdown_timeout=0 \
+	persist.enable_task_snapshots=false \
+	persist.sys.show_color_option=false \
+	persist.bt.power.down=true \
+	ro.wifi.sleep.power.down=true \
+	persist.wifi.sleep.delay.ms=0

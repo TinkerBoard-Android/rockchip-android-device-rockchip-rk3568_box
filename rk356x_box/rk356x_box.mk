@@ -42,7 +42,7 @@ PRODUCT_AAPT_PREF_CONFIG := tvdpi
 #
 ## add Rockchip properties
 #
-PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=160
+PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=213
 
 # TV Input HAL
 PRODUCT_PACKAGES += \
@@ -87,8 +87,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # copy input keylayout and device config
 PRODUCT_COPY_FILES += \
-    device/rockchip/rk356x_box/rk356x_box/remote_config/fe700030_pwm.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/fe700030_pwm.kl \
-    device/rockchip/rk356x_box/rk356x_box/remote_config/fe6e0030_pwm.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/fe6e0030_pwm.kl
+    device/rockchip/rk356x_box/remote_config/fe700030_pwm.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/fe700030_pwm.kl \
+    device/rockchip/rk356x_box/remote_config/fe6e0030_pwm.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/fe6e0030_pwm.kl
 
 # Vendor seccomp policy files for media components:
 PRODUCT_COPY_FILES += \
@@ -97,16 +97,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libeffects/data/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
 
-PRODUCT_COPY_FILES += \
-    device/rockchip/rk356x_box/rk356x_box/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml \
-    $(TARGET_DEVICE_DIR)/media_profiles_default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_V1_0.xml \
+BOARD_HS_ETHERNET := true
 
 #
 #add Rockchip properties here
 #
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.machinetype=356x_box \
-    vendor.hwc.device.extend=eDP \
     wifi.interface=wlan0 \
     ro.audio.monitorOrientation=true \
     persist.vendor.rk_vulkan=true \
@@ -118,7 +115,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.android.checkjni=0 \
     ro.vendor.nrdp.modelgroup=NEXUSPLAYERFUGU \
     vendor.hwc.device.primary=HDMI-A,TV \
-    ro.vendor.sdkversion=RK356x_ANDROID11.0_BOX_V1.0.0 \
+    ro.vendor.sdkversion=RK356x_ANDROID11.0_BOX_V1.0.1 \
 
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
