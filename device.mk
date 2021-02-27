@@ -73,6 +73,7 @@ endif
 # add Rockchip properties here
 #
 PRODUCT_PROPERTY_OVERRIDES += \
+	ro.vendor.rk_sdk=1 \
 	ro.ril.ecclist=112,911 \
 	ro.opengles.version=196610 \
 	wifi.interface=wlan0 \
@@ -91,7 +92,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	wifi.supplicant_scan_interval=15 \
 	ro.factory.tool=0 \
 	ro.kernel.android.checkjni=0 \
-	ro.build.shutdown_timeout=0 \
+	ro.build.shutdown_timeout=6 \
 	persist.enable_task_snapshots=false \
 	persist.sys.show_color_option=false \
 	persist.bt.power.down=true \

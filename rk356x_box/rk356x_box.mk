@@ -115,7 +115,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.android.checkjni=0 \
     ro.vendor.nrdp.modelgroup=NEXUSPLAYERFUGU \
     vendor.hwc.device.primary=HDMI-A,TV \
-    ro.vendor.sdkversion=RK356x_ANDROID11.0_BOX_V1.0.1 \
+    ro.vendor.sdkversion=RK356x_ANDROID11.0_BOX_V1.0.2 \
 
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \

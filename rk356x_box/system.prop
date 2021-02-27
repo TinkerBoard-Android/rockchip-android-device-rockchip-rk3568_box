@@ -48,6 +48,5 @@ ro.boot.wificountrycode=CN
 sys.video.netBuffer=20
 sys.video.refFrameMode=0
 ro.nrdp.modelgroup=NEXUSPLAYERFUGU
-ro.build.shutdown_timeout=1
 persist.sys.rotation.enable=true
 persist.sys.forced_orient=2
