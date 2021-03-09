@@ -18,6 +18,7 @@ BUILD_WITH_GO_OPT := false
 
 # AB image definition
 BOARD_USES_AB_IMAGE := false
+BOARD_ROCKCHIP_VIRTUAL_AB_ENABLE := false
 
 ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
     include device/rockchip/common/BoardConfig_AB.mk
@@ -25,5 +26,5 @@ ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
 endif
 
 PRODUCT_UBOOT_CONFIG := rk3566
-PRODUCT_KERNEL_DTS := rk3566-evb1-ddr4-v10
+PRODUCT_KERNEL_DTS := rk3566-box-demo-v10
 BOARD_GSENSOR_MXC6655XA_SUPPORT := true

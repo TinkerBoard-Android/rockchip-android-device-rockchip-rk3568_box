@@ -5,9 +5,14 @@ PRODUCT_PACKAGES += \
     displayd \
     libion
 
+# Disable partial updates
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.hwui.use_partial_updates=false
+
 BOARD_SEPOLICY_DIRS += vendor/rockchip/hardware/interfaces/neuralnetworks/1.0/default/sepolicy
 PRODUCT_PACKAGES += \
-    librknnhal_bridge \
+    public.libraries-rockchip \
+    librknnhal_bridge.rockchip \
     rockchip.hardware.neuralnetworks@1.0-impl \
     rockchip.hardware.neuralnetworks@1.0-service
 

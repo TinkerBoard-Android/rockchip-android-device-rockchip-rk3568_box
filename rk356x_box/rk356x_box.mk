@@ -31,6 +31,8 @@ $(call inherit-product, frameworks/native/build/tablet-10in-xhdpi-2048-dalvik-he
 #DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/../overlay
 DEVICE_MANIFEST_FILE := device/rockchip/rk356x_box/rk356x_box/manifest.xml
 
+PRODUCT_FSTAB_TEMPLATE := device/rockchip/rk356x_box/fstab_box.in
+
 PRODUCT_CHARACTERISTICS := tv
 
 PRODUCT_NAME := rk356x_box
@@ -115,7 +117,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.android.checkjni=0 \
     ro.vendor.nrdp.modelgroup=NEXUSPLAYERFUGU \
     vendor.hwc.device.primary=HDMI-A,TV \
-    ro.vendor.sdkversion=RK356x_ANDROID11.0_BOX_V1.0.2 \
+    ro.vendor.sdkversion=RK356x_ANDROID11.0_BOX_V1.0.3 \
 
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
