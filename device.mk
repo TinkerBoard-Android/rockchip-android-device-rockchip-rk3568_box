@@ -82,11 +82,12 @@ ifeq ($(TARGET_BOARD_USE_MIPI_CAMEAR),true)
 CAMERA_ETC_PATH := $(TOP)/hardware/rockchip/camera/etc
 IQ_FILES_PATH := $(TOP)/external/camera_engine_rkaiq/iqfiles
 PRODUCT_COPY_FILES += \
-	$(CAMERA_ETC_PATH)/camera/camera3_profiles_$(TARGET_BOARD_PLATFORM).xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera3_profiles.xml \
+	$(LOCAL_PATH)/etc/camera/hardware/rockchip/camera/etc/camera/camera3_profiles_rk356x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera3_profiles.xml \
 	$(call find-copy-subdir-files,*,$(CAMERA_ETC_PATH)/firmware,$(TARGET_COPY_OUT_VENDOR)/firmware) \
 	$(call find-copy-subdir-files,*,$(CAMERA_ETC_PATH)/camera,$(TARGET_COPY_OUT_VENDOR)/etc/camera) \
 	$(call find-copy-subdir-files,*,$(CAMERA_ETC_PATH)/tools,$(TARGET_COPY_OUT_VENDOR)/bin) \
-	$(call find-copy-subdir-files,*,$(IQ_FILES_PATH)/,$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/)
+	$(call find-copy-subdir-files,*,$(IQ_FILES_PATH)/,$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/) \
+	$(call find-copy-subdir-files,*,$(LOCAL_PATH)/etc/camera/external/camera_engine_rkaiq/iqfiles,$(TARGET_COPY_OUT_VENDOR)/etc/camera/rkisp2/)
 endif
 
 #
