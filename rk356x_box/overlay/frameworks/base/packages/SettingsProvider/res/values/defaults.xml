@@ -13,5 +13,8 @@
 	The default is 15 minutes, 0 means that the wifi is turned off
 	immediately after the screen is off. -->
     <integer name="def_wifi_sleep_policy">2</integer>
+
+    <!-- Default for Settings.Secure.SHOW_IME_WITH_HARD_KEYBOARD -->
+    <bool name="def_show_ime_with_hard_keyboard">true</bool>
 </resources>
 
