@@ -118,7 +118,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.nrdp.modelgroup=NEXUSPLAYERFUGU \
     vendor.hwc.device.primary=HDMI-A,TV \
     persist.vendor.framebuffer.main=1920x1080@60 \
-    ro.vendor.sdkversion=RK356x_ANDROID11.0_BOX_V1.0.3 \
+    ro.vendor.sdkversion=RK356x_ANDROID11.0_BOX_V1.0.4 \
 
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \

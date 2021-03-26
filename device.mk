@@ -67,7 +67,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/public.libraries.txt:vendor/etc/public.libraries.txt
 
-TARGET_BOARD_CONCISE_RESOLUTION := true
+TARGET_BOARD_CONCISE_RESOLUTION := false
 # remove some resolution which are not commonly used
 ifeq ($(TARGET_BOARD_CONCISE_RESOLUTION),true)
 PRODUCT_COPY_FILES += \
