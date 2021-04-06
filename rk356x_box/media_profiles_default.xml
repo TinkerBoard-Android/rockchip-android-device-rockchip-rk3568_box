@@ -135,7 +135,7 @@
                    bitRate="256000"
                    width="640"
                    height="480"
-                   frameRate="15" />
+                   frameRate="30" />
 
             <Audio codec="aac"
                    bitRate="61000"
@@ -150,7 +150,7 @@
                    bitRate="256000"
                    width="720"
                    height="480"
-                   frameRate="12" />
+                   frameRate="30" />
 
             <Audio codec="aac"
                    bitRate="61000"
@@ -165,7 +165,7 @@
                    bitRate="256000"
                    width="800"
                    height="600"
-                   frameRate="12" />
+                   frameRate="30" />
 
             <Audio codec="aac"
                    bitRate="61000"
