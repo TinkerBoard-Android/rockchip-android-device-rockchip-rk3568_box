@@ -16,6 +16,8 @@
 include device/rockchip/rk356x_box/CommonBoardConfig.mk
 BUILD_WITH_GO_OPT := false
 
+BOARD_SELINUX_ENFORCING := false
+
 # AB image definition
 BOARD_USES_AB_IMAGE := false
 BOARD_ROCKCHIP_VIRTUAL_AB_ENABLE := false
