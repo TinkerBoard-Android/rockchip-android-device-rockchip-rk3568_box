@@ -46,6 +46,8 @@ PRODUCT_AAPT_PREF_CONFIG := tvdpi
 #
 PRODUCT_PROPERTY_OVERRIDES += ro.sf.lcd_density=213
 
+BOARD_SELINUX_ENFORCING := false
+
 # TV Input HAL
 PRODUCT_PACKAGES += \
     android.hardware.tv.input@1.0-impl
