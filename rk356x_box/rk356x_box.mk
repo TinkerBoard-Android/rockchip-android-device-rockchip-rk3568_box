@@ -51,7 +51,7 @@ PRODUCT_PACKAGES += \
     android.hardware.tv.input@1.0-impl
 
 # Display
-TARGET_BASE_PARAMETER_IMAGE := device/rockchip/common/baseparameter/baseparameter_fb720.img
+TARGET_BASE_PARAMETER_IMAGE := device/rockchip/common/baseparameter/baseparameter.img
 
 # Disable bluetooth because of continuous driver crashes
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += config.disable_bluetooth=true
@@ -118,7 +118,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.nrdp.modelgroup=NEXUSPLAYERFUGU \
     vendor.hwc.device.primary=HDMI-A,TV \
     persist.vendor.framebuffer.main=1920x1080@60 \
-    ro.vendor.sdkversion=RK356x_ANDROID11.0_BOX_V1.0.4 \
+    ro.vendor.sdkversion=RK356x_ANDROID11.0_BOX_V1.0.6 \
 
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
