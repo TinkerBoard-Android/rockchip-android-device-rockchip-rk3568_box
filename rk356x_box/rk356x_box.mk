@@ -51,7 +51,7 @@ PRODUCT_PACKAGES += \
     android.hardware.tv.input@1.0-impl
 
 # Display
-TARGET_BASE_PARAMETER_IMAGE := device/rockchip/common/baseparameter/baseparameter.img
+TARGET_BASE_PARAMETER_IMAGE := device/rockchip/rk356x_box/etc/baseparameter_auto.img
 
 # Disable bluetooth because of continuous driver crashes
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += config.disable_bluetooth=true

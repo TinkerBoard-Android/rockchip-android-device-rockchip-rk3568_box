@@ -115,3 +115,5 @@ BOARD_HS_DYNAMIC_AFBC_TARGET := false
 
 #trust is merging into uboot
 BOARD_ROCKCHIP_TRUST_MERGE_TO_UBOOT := true
+
+TARGET_ROCKCHIP_PCBATEST := false
