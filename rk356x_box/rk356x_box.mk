@@ -75,6 +75,7 @@ PRODUCT_PACKAGES += \
     displayd \
     libion \
     MediaCenter \
+    RockchipPinnerService
 
 PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
@@ -118,7 +119,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.nrdp.modelgroup=NEXUSPLAYERFUGU \
     vendor.hwc.device.primary=HDMI-A,TV \
     persist.vendor.framebuffer.main=1920x1080@60 \
-    ro.vendor.sdkversion=RK356x_ANDROID11.0_BOX_V1.0.6 \
+    ro.vendor.sdkversion=RK356x_ANDROID11.0_BOX_V1.0.8 \
 
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \

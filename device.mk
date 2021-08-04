@@ -13,6 +13,7 @@ BOARD_SEPOLICY_DIRS += vendor/rockchip/hardware/interfaces/neuralnetworks/1.0/de
 PRODUCT_PACKAGES += \
     public.libraries-rockchip \
     librknnhal_bridge.rockchip \
+    librknn_api_android \
     rockchip.hardware.neuralnetworks@1.0-impl \
     rockchip.hardware.neuralnetworks@1.0-service
 
@@ -74,6 +75,14 @@ PRODUCT_COPY_FILES += \
     device/rockchip/rk356x_box/etc/resolution_white.xml:/system/usr/share/resolution_white.xml
 endif
 
+#add for camera aiq2.0
+#
+PRODUCT_PACKAGES += \
+       rkaiq_tool_server \
+       rkaiq_3A_server
+PRODUCT_COPY_FILES += \
+       external/camera_engine_rkaiq/rkisp2x_tuner/reset_camera.sh:$(TARGET_COPY_OUT_VENDOR)/etc/camera/reset_camera.sh
+
 # default enalbe mipi camera for box, noeed disable please
 TARGET_BOARD_USE_MIPI_CAMEAR := true
 
@@ -118,4 +127,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.sys.show_color_option=false \
 	persist.bt.power.down=true \
 	ro.wifi.sleep.power.down=true \
-	persist.wifi.sleep.delay.ms=0
+	persist.wifi.sleep.delay.ms=0 \
+	persist.enable_task_snapshots=false \
+	ro.vendor.frameratelock=true
